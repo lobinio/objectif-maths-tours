@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://objectif-maths-tours.fr/sitemap.xml
