@@ -48,6 +48,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative;
         }
 
         .logo-section { display: flex; align-items: center; gap: 1.2rem; }
@@ -801,9 +802,44 @@
             .services-grid, .pricing-grid {  grid-template-columns: 1fr !important;  }
         }
 
+                .nav-toggle{
+        display:none;
+        background: none;
+        border: 0;
+        cursor: pointer;
+        padding: 10px;
+        margin-left: auto;
+        }
+
+        .nav-toggle span{
+        display:block;
+        width: 26px;
+        height: 3px;
+        margin: 5px 0;
+        background: #1f2937; /* couleur des traits */
+        border-radius: 2px;
+        }
+
         @media (max-width: 768px) {
             .nav-container { padding: 1rem 2rem; }
-            .nav-menu { display: none; }
+            .nav-toggle{ display:block; }
+
+            /* Le menu doit devenir un panneau déroulant */
+            .nav-menu{
+                display:none;              /* fermé par défaut */
+                position:absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                padding: 12px 16px;
+                box-shadow: 0 10px 30px rgba(0,0,0,.12);
+                z-index: 999;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .nav-menu.open{ display:flex; }
             section { padding: 4rem 1.25rem !important;  }
             .hero { padding: 3rem 2rem; }
             .hero-content h1 { font-size: 2.5rem; }
