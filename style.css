@@ -530,6 +530,14 @@
             margin-top: 3rem;
         }
 
+        /* Tarifs : 2 colonnes desktop, 1 colonne mobile */
+        #tarifs .pricing-grid{
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 900px;
+        margin: 0 auto;
+        }
+
+
         .pricing-card {
             background: var(--white);
             padding: 3rem 2.5rem;
@@ -790,13 +798,13 @@
         @media (max-width: 1200px) {
             .hero { grid-template-columns: 1fr; gap: 3rem; }
             .hero-visual { display: none; }
-            .services-grid, .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+            .services-grid, .pricing-grid {  grid-template-columns: 1fr !important;  }
         }
 
         @media (max-width: 768px) {
             .nav-container { padding: 1rem 2rem; }
             .nav-menu { display: none; }
-            section { padding: 4rem 2rem; }
+            section { padding: 4rem 1.25rem !important;  }
             .hero { padding: 3rem 2rem; }
             .hero-content h1 { font-size: 2.5rem; }
             .section-header h2 { font-size: 2.5rem; }

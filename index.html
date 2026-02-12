@@ -29,7 +29,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=4">
+    <link rel="stylesheet" href="style.css?v=5">
     <!-- LocalBusiness schema -->
     <script type="application/ld+json">
         {
@@ -70,6 +70,9 @@
             <div class="logo-section">
                <img src="assets/logo-objectif-maths.png" alt="Objectif Maths - Cours particuliers de maths à Tours" loading="lazy">
             </div>
+            <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-menu">
+            <span></span><span></span><span></span>
+            </button>
             <ul class="nav-menu">
                 <li><a href="#accueil">Accueil</a></li>
                 <li><a href="#services">Services</a></li>
@@ -398,7 +401,8 @@
         <p>Cours particuliers à domicile ou en ligne — sans engagement</p>
     </div>
 
-    <div class="pricing-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 900px; margin: 0 auto;">
+    <div class="pricing-grid">
+
         
         <!-- Carte 1 -->
         <div class="pricing-card">
@@ -793,6 +797,27 @@
       }
     }
   });
+
+
+    // --- Menu mobile ---
+  const toggle = document.querySelector('.nav-toggle');
+  const menu = document.querySelector('.nav-menu');
+
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+      const isOpen = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    // Ferme le menu quand on clique sur un lien
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
 </script>
 
 </body>
