@@ -4,8 +4,8 @@
 
 
         :root {
-            --primary-blue: #1e5a8e;
-            --accent-orange: #f59e23;
+            --primary-blue: #143e63;   /* plus profond, plus académique */
+            --accent-orange: #e67e22;  /* plus sobre */
             --dark-navy: #0d2d4a;
             --light-cream: #fafaf8;
             --soft-gray: #e8e8e4;
@@ -54,7 +54,7 @@
         .logo-section { display: flex; align-items: center; gap: 1.2rem; }
 
         .logo-section img {
-            height: 110px;      /* logo plus visible */
+            height: 140px;      /* logo plus visible */
             width: auto;
         }
 
@@ -821,7 +821,7 @@
         }
 
         @media (max-width: 768px) {
-            .nav-container { padding: 1rem 2rem; }
+            .nav-container { padding: 1rem 4rem; }
             .nav-toggle{ display:block; }
 
             /* Le menu doit devenir un panneau déroulant */
