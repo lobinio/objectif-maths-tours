@@ -1,0 +1,43 @@
+<svg width="100%" viewBox="0 0 680 260" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  
+<mask id="imagine-text-gaps-8cuq2q" maskUnits="userSpaceOnUse"><rect x="0" y="0" width="680" height="260" fill="white"/><rect x="241.50392150878906" y="88.60983276367188" width="248.9921875" height="38.001590728759766" fill="black" rx="2"/><rect x="270.6133728027344" y="134.60983276367188" width="190.7733154296875" height="38.001590728759766" fill="black" rx="2"/><rect x="333.6579895019531" y="184.55511474609375" width="63.739585876464844" height="15.333864212036133" fill="black" rx="2"/></mask></defs>
+
+<rect x="60" y="16" width="560" height="228" rx="2" stroke="#e0e8f0" stroke-width="0.5" style="fill:rgb(255, 255, 255);stroke:rgb(224, 232, 240);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+<!-- SYMBOLE -->
+<g transform="translate(178, 128)" style="fill:rgb(0, 0, 0);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto">
+  <!-- Cercle conteneur bleu marine -->
+  <circle cx="0" cy="0" r="48" fill="none" stroke="#143e63" stroke-width="0.8" style="fill:none;stroke:rgb(20, 62, 99);color:rgb(0, 0, 0);stroke-width:0.8px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Trois segments horizontaux — bleu marine -->
+  <line x1="-22" y1="-18" x2="14" y2="-18" stroke="#143e63" stroke-width="1.6" stroke-linecap="round" fill="none" style="fill:none;stroke:rgb(20, 62, 99);color:rgb(0, 0, 0);stroke-width:1.6px;stroke-linecap:round;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <line x1="-22" y1="0" x2="22" y2="0" stroke="#143e63" stroke-width="1.6" stroke-linecap="round" fill="none" style="fill:none;stroke:rgb(20, 62, 99);color:rgb(0, 0, 0);stroke-width:1.6px;stroke-linecap:round;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+  <line x1="-22" y1="18" x2="30" y2="18" stroke="#143e63" stroke-width="1.6" stroke-linecap="round" fill="none" style="fill:none;stroke:rgb(20, 62, 99);color:rgb(0, 0, 0);stroke-width:1.6px;stroke-linecap:round;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Diagonale — orange -->
+  <line x1="-6" y1="28" x2="28" y2="-28" stroke="#e67e22" stroke-width="1.8" stroke-linecap="round" fill="none" style="fill:none;stroke:rgb(230, 126, 34);color:rgb(0, 0, 0);stroke-width:1.8px;stroke-linecap:round;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+  <!-- Carré central — orange -->
+  <rect x="-3.5" y="-3.5" width="7" height="7" fill="#e67e22" style="fill:rgb(230, 126, 34);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+</g>
+
+<!-- SÉPARATEUR -->
+<line x1="248" y1="78" x2="248" y2="178" mask="url(#imagine-text-gaps-8cuq2q)" style="fill:none;stroke:rgb(208, 216, 224);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+<!-- OBJECTIF -->
+<text x="366" y="118" text-anchor="middle" style="fill:rgb(20, 62, 99);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:30px;font-weight:200;text-anchor:middle;dominant-baseline:auto">OBJECTIF</text>
+
+<!-- filet -->
+<line x1="262" y1="130" x2="470" y2="130" style="fill:none;stroke:rgb(208, 216, 224);color:rgb(0, 0, 0);stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+<!-- MATHS en orange -->
+<text x="366" y="164" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-weight="400" font-size="30px" fill="#e67e22" letter-spacing="16px" style="fill:rgb(230, 126, 34);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:30px;font-weight:400;text-anchor:middle;dominant-baseline:auto">MATHS</text>
+
+<!-- filet bas bleu -->
+<line x1="262" y1="176" x2="470" y2="176" style="fill:none;stroke:rgb(20, 62, 99);color:rgb(0, 0, 0);stroke-width:0.8px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, sans-serif;font-size:16px;font-weight:400;text-anchor:start;dominant-baseline:auto"/>
+
+<!-- TOURS -->
+<text x="366" y="196" text-anchor="middle" style="fill:rgb(153, 153, 153);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;font-size:10px;font-weight:300;text-anchor:middle;dominant-baseline:auto">TOURS</text>
+
+</svg>
