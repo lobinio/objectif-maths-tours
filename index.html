@@ -120,6 +120,44 @@ nav {
 }
 .nav-cta:hover { background: var(--orange) !important; }
 
+.nav-phone {
+  display: flex; align-items: center; gap: 0.5rem;
+  font-size: 0.88rem; font-weight: 400;
+  color: var(--navy); text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 0.2s;
+}
+.nav-phone-icon {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--gray-100);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.75rem;
+}
+
+/* ── BOUTON FLOTTANT ── */
+.fab {
+  position: fixed; bottom: 2rem; right: 2rem; z-index: 500;
+  display: flex; align-items: center; gap: 0.7rem;
+  background: var(--orange); color: var(--white);
+  text-decoration: none;
+  padding: 0.9rem 1.6rem; border-radius: 50px;
+  font-size: 0.88rem; font-weight: 400; letter-spacing: 0.04em;
+  box-shadow: 0 4px 20px rgba(230, 126, 34, 0.45);
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.fab:hover {
+  background: var(--orange-lt);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(230, 126, 34, 0.5);
+}
+.fab-icon { font-size: 1rem; }
+.fab.hidden { opacity: 0; pointer-events: none; transform: translateY(8px); transition: opacity 0.3s, transform 0.3s; }
+@media (max-width: 768px) {
+  .fab { bottom: 1.2rem; right: 1.2rem; padding: 0.85rem 1.3rem; font-size: 0.82rem; }
+  .fab-label { display: none; }
+  .fab-icon { font-size: 1.2rem; }
+}
+
 /* Hamburger */
 .nav-toggle {
   display: none;
@@ -910,6 +948,12 @@ footer {
       <li><a href="#methode">Méthode</a></li>
       <li><a href="#apropos">À propos</a></li>
       <li><a href="#tarifs">Tarifs</a></li>
+      <li>
+        <span class="nav-phone">
+          <span class="nav-phone-icon">📞</span>
+          06 17 80 04 86
+        </span>
+      </li>
       <li><a href="#contact" class="nav-cta">Réserver</a></li>
     </ul>
   </div>
@@ -1533,6 +1577,12 @@ footer {
   </div>
 </footer>
 
+<!-- ── BOUTON FLOTTANT ── -->
+<a href="#contact" class="fab" id="fab" aria-label="Réserver un cours">
+  <span class="fab-icon">✉</span>
+  <span class="fab-label">Réserver un cours</span>
+</a>
+
 <!-- ── MODAL KONFIA ── -->
 <div class="modal-overlay" id="konfia-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
   <div class="modal-box">
@@ -1591,6 +1641,14 @@ navMenu.querySelectorAll('a').forEach(a => {
     navToggle.setAttribute('aria-expanded', 'false');
   });
 });
+
+// ── Bouton flottant : masquer quand section contact visible ──
+const fab = document.getElementById('fab');
+const contactSection = document.getElementById('contact');
+const fabObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => fab.classList.toggle('hidden', e.isIntersecting));
+}, { threshold: 0.2 });
+if (contactSection) fabObs.observe(contactSection);
 
 // ── Modal Konfia maintenance ──
 const konfiaModal = document.getElementById('konfia-modal');
