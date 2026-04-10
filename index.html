@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- Google Search Console — remplacer XXXXXXXX par le code fourni par GSC -->
+<!-- <meta name="google-site-verification" content="XXXXXXXX"> -->
+
 <!-- SEO -->
 <title>Cours particuliers de maths à Tours | Objectif Maths (professeur certifié)</title>
 <meta name="description" content="Cours particuliers de mathématiques à Tours et son agglomération (Indre-et-Loire) avec un professeur certifié de l'Éducation Nationale. Collège, lycée, STI2D, prépa.">
@@ -1046,7 +1049,7 @@ footer {
           <p class="svc-text">Chaque famille dispose d'un espace personnel sécurisé : séances, ressources partagées, messagerie directe et comptes-rendus après chaque cours.</p>
           <span class="svc-tag">Plateforme propriétaire · Espace familles</span>
         </div>
-        <a href="http://www.konfia.fr" target="_blank" rel="noopener" class="konfia-card-cta">
+        <a href="https://konfia.fr/famille" target="_blank" rel="noopener" class="konfia-card-cta">
           Accéder à l'espace ↗
         </a>
       </div>
@@ -1114,7 +1117,7 @@ footer {
         <div class="step-n">04</div>
         <div class="step-title">Suivi</div>
         <p class="step-text">Bilans réguliers, ajustements et préparation des échéances — contrôles, bac, concours.</p>
-        <a href="http://www.konfia.fr" target="_blank" rel="noopener" class="konfia-pill">
+        <a href="https://konfia.fr/famille" target="_blank" rel="noopener" class="konfia-pill">
           Espace familles Konfia ↗
         </a>
       </div>
@@ -1157,7 +1160,7 @@ footer {
       </div>
     </div>
     <div class="konfia-cta-wrap reveal">
-      <a href="http://www.konfia.fr" target="_blank" rel="noopener" class="konfia-cta-btn">
+      <a href="https://konfia.fr/famille" target="_blank" rel="noopener" class="konfia-cta-btn">
         Accéder à Konfia ↗
       </a>
       <p class="konfia-cta-note">
@@ -1441,6 +1444,12 @@ footer {
         <input type="text" name="_gotcha" style="display:none">
         <input type="hidden" name="_subject" value="Nouvelle demande — Objectif Maths">
         <input type="hidden" name="_next" value="https://objectif-maths-tours.fr/merci.html">
+        <!-- Tracking source -->
+        <input type="hidden" name="source_url" id="track_source_url">
+        <input type="hidden" name="referrer" id="track_referrer">
+        <input type="hidden" name="utm_source" id="track_utm_source">
+        <input type="hidden" name="utm_medium" id="track_utm_medium">
+        <input type="hidden" name="utm_campaign" id="track_utm_campaign">
         <button type="submit" class="submit-btn">Envoyer ma demande</button>
         <p class="form-note">
           Vos informations restent strictement confidentielles.
@@ -1562,7 +1571,7 @@ footer {
         <ul>
           <li><a href="#tarifs">Tarifs</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="http://www.konfia.fr" target="_blank" rel="noopener">Konfia – Espace familles</a></li>
+          <li><a href="https://konfia.fr/famille" target="_blank" rel="noopener">Konfia – Espace familles</a></li>
           <li><a href="#confidentialite">Confidentialité</a></li>
           <li><a href="#mentions-legales">Mentions légales</a></li>
           <li><a href="https://www.facebook.com/profile.php?id=61587208474553"
@@ -1582,6 +1591,7 @@ footer {
   <span class="fab-icon">✉</span>
   <span class="fab-label">Réserver un cours</span>
 </a>
+
 
 <!-- ── MODAL KONFIA ── -->
 <div class="modal-overlay" id="konfia-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
@@ -1650,20 +1660,6 @@ const fabObs = new IntersectionObserver((entries) => {
 }, { threshold: 0.2 });
 if (contactSection) fabObs.observe(contactSection);
 
-// ── Modal Konfia maintenance ──
-const konfiaModal = document.getElementById('konfia-modal');
-const closeModal = () => konfiaModal.classList.remove('open');
-
-document.querySelectorAll('a[href="http://www.konfia.fr"]').forEach(a => {
-  a.addEventListener('click', e => {
-    e.preventDefault();
-    konfiaModal.classList.add('open');
-  });
-});
-document.querySelector('.modal-close').addEventListener('click', closeModal);
-document.getElementById('modal-close-btn').addEventListener('click', closeModal);
-konfiaModal.addEventListener('click', e => { if (e.target === konfiaModal) closeModal(); });
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
 // ── Smooth scroll with nav offset ──
 document.querySelectorAll('a[href^="#"]').forEach(a => {
@@ -1678,6 +1674,32 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     });
   });
 });
+
+// ── Modal Konfia maintenance ──
+const konfiaModal = document.getElementById('konfia-modal');
+const closeModal = () => konfiaModal.classList.remove('open');
+
+document.querySelectorAll('a[href="https://konfia.fr/famille"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    konfiaModal.classList.add('open');
+  });
+});
+document.querySelector('.modal-close').addEventListener('click', closeModal);
+document.getElementById('modal-close-btn').addEventListener('click', closeModal);
+konfiaModal.addEventListener('click', e => { if (e.target === konfiaModal) closeModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+// ── Tracking source formulaire ──
+(function () {
+  const p = new URLSearchParams(window.location.search);
+  const set = (id, val) => { const el = document.getElementById(id); if (el) el.value = val; };
+  set('track_source_url',   window.location.href);
+  set('track_referrer',     document.referrer || 'direct');
+  set('track_utm_source',   p.get('utm_source')   || '');
+  set('track_utm_medium',   p.get('utm_medium')   || '');
+  set('track_utm_campaign', p.get('utm_campaign') || '');
+})();
 </script>
 </body>
 </html>
